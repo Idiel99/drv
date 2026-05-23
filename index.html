@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DRV Development LLC — Building South Florida's future</title>
+  <meta name="description" content="Family-run, licensed Florida general contractor. New construction, custom homes, commercial build-outs, remodels, and design-build across Miami-Dade, Broward, and Palm Beach. CGC1538931." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+</head>
+<body>
+  <div class="drv-loader" id="drvLoader">
+    <div class="mark">DRV</div>
+  </div>
+
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const l = document.getElementById("drvLoader");
+        if (l) { l.classList.add("hide"); setTimeout(() => l.remove(), 700); }
+      }, 600);
+    });
+  </script>
+</body>
+</html>
