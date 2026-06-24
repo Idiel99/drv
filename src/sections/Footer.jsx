@@ -7,19 +7,19 @@ export function Footer() {
     <footer className="relative bg-[var(--ink-2)] pt-20 lg:pt-28 pb-10 border-t border-white/[0.06] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="relative">
-          <div aria-hidden="true" className="font-display text-[clamp(96px,22vw,360px)] font-[700] tracking-[-0.05em] text-[var(--mist)] leading-[0.85]">
+          <div aria-hidden="true" className="font-display text-[clamp(72px,22vw,360px)] font-[700] tracking-[-0.05em] text-[var(--mist)] leading-[0.85]">
             DRV
           </div>
-          <div className="absolute right-0 bottom-4 lg:bottom-8 font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--silver)] max-w-xs text-right">
+          <div className="mt-4 lg:mt-0 lg:absolute lg:right-0 lg:bottom-8 font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--silver)] max-w-xs lg:text-right">
             {t.footer.tag}
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 lg:grid-cols-12 gap-10 pt-10 border-t border-white/[0.06]">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 pt-10 border-t border-white/[0.06]">
           <div className="lg:col-span-4">
             <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--silver)] mb-4">{t.footer.cols.contact}</div>
             <div className="space-y-2">
-              <a href="mailto:drvdevelopment17@gmail.com" className="block text-[var(--mist)] text-[14px] hover:text-[var(--accent)] transition-colors">drvdevelopment17@gmail.com</a>
+              <a href="mailto:drvdevelopment17@gmail.com" className="block break-words text-[var(--mist)] text-[14px] hover:text-[var(--accent)] transition-colors">drvdevelopment17@gmail.com</a>
               <a href="tel:+17864819455" className="block text-[var(--mist)] text-[14px] hover:text-[var(--accent)] transition-colors">+1 (786) 481-9455</a>
               <a href="tel:+17869614047" className="block text-[var(--silver)] text-[14px] hover:text-[var(--accent)] transition-colors">+1 (786) 961-4047 — Dennis</a>
             </div>

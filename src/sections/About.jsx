@@ -10,8 +10,7 @@ export function About() {
           <div className="col-span-12 lg:col-span-5">
             <div className="lg:sticky lg:top-32">
               <ArchPlaceholder tone="warm" h={620} label="DANIELA + DENNIS VARELA" className="rounded-sm" />
-              <div className="mt-4 font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--silver)] flex justify-between">
-                <span>[ portrait placeholder ]</span>
+              <div className="mt-4 font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--silver)] flex justify-end">
                 <span>Miami · FL</span>
               </div>
             </div>

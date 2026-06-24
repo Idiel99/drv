@@ -51,11 +51,6 @@ export function ProjectModal({ project, onClose }) {
                 <ArchPlaceholder tone={project.tone} h={280} />
                 <ArchPlaceholder tone={project.tone === "warm" ? "steel" : "warm"} h={280} />
               </div>
-
-              <div className="mt-12 p-8 lg:p-10 border border-white/[0.06] rounded-2xl bg-white/[0.02]">
-                <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--silver)] mb-3">Note</div>
-                <p className="text-[15px] text-[var(--mist)]/80 leading-[1.55]">Real project photography goes here. We'll drop in 6–10 high-resolution images per project with before/after pairings and detail shots.</p>
-              </div>
             </div>
           </motion.div>
         </motion.div>

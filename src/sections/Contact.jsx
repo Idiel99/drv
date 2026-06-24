@@ -19,6 +19,16 @@ export function Contact() {
   function set(k, v) { setForm(f => ({ ...f, [k]: v })); }
   function submit(e) {
     e.preventDefault();
+    const subject = `New project inquiry — ${form.type}`;
+    const body = [
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone || "—"}`,
+      `Project type: ${form.type}`,
+      "",
+      form.msg
+    ].join("\n");
+    window.location.href = `mailto:drvdevelopment17@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   }
 
@@ -65,7 +75,7 @@ export function Contact() {
                     <FormRow label={t.contact.f_name}>
                       <input required value={form.name} onChange={e => set("name", e.target.value)} className="contact-input" placeholder="Your full name" />
                     </FormRow>
-                    <div className="grid grid-cols-2 gap-px bg-white/[0.06]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06]">
                       <FormRow label={t.contact.f_email}>
                         <input required type="email" value={form.email} onChange={e => set("email", e.target.value)} className="contact-input" placeholder="you@email.com" />
                       </FormRow>
@@ -90,7 +100,7 @@ export function Contact() {
                     <FormRow label={t.contact.f_msg}>
                       <textarea rows={5} value={form.msg} onChange={e => set("msg", e.target.value)} className="contact-input resize-none" placeholder="Site address, timeline, budget range, anything we should know." />
                     </FormRow>
-                    <div className="px-6 py-6 flex items-center justify-between bg-[var(--ink)]">
+                    <div className="px-6 py-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between bg-[var(--ink)]">
                       <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--silver)]">Response within 1 business day</div>
                       <MagneticBtn as="button" type="submit" variant="accent">{t.contact.submit}</MagneticBtn>
                     </div>

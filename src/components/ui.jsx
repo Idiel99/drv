@@ -8,6 +8,7 @@ export const useLang = () => useContext(LangCtx);
 export function LangProvider({ children }) {
   const [lang, setLang] = useState("en");
   const t = COPY[lang];
+  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   return <LangCtx.Provider value={{ lang, t, setLang }}>{children}</LangCtx.Provider>;
 }
 
@@ -148,7 +149,6 @@ export function ArchPlaceholder({ tone = "warm", h = 360, label, className = "" 
       {label && (
         <div className="absolute left-4 bottom-4 right-4 flex items-end justify-between">
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/70">{label}</span>
-          <span className="font-mono text-[10px] text-white/40">[ photo ]</span>
         </div>
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink)]/40 to-transparent" />
